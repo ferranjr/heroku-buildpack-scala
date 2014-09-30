@@ -55,6 +55,8 @@ if [ -f bin/pre_compile ]; then
     echo "-----> Running pre-compile hook"
     chmod +x bin/pre_compile
     source bin/pre_compile ${BUILD_DIR}
+else
+    echo "-----> No pre-compile hook detected on ${BUILD_DIR}"
 fi
 
 # unpack cache
